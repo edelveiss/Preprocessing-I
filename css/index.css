@@ -154,11 +154,6 @@ table {
   margin: 0;
   max-width: 100%;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 html {
   font-size: 62.5%;
 }
@@ -172,18 +167,18 @@ body {
   font-size: 1.6rem;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 1000;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 1000;
 }
 h3,
 h4,
 h5,
 h6 {
-  font-size: 1.8rem;
+  font-size: 1rem;
 }
 h1,
 h2,
@@ -193,6 +188,9 @@ h5,
 h6 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 1200;
+}
+p {
+  font-size: 0.7rem;
 }
 .bodyWrapper {
   width: 80%;
@@ -211,6 +209,7 @@ header nav {
 }
 header nav .logo {
   width: 7%;
+  padding-left: 2%;
 }
 header nav .nav-links {
   display: flex;
@@ -225,12 +224,13 @@ header nav .nav-links a {
   text-decoration: none;
   font-weight: bold;
   text-align: center;
+  font-size: 0.8rem;
 }
 header nav .nav-links a:hover {
   box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
-  border-radius: 15px;
+  border-radius: 11px;
   background-color: #e7ede2;
 }
 /*End  of navigation*/
@@ -271,9 +271,9 @@ header nav .nav-links a:hover {
 .showcase .intro .team-up-btn button {
   background-color: #e7ede2;
   width: 100%;
-  height: 80px;
-  font-size: 1.5rem;
-  border-radius: 15px;
+  height: 50px;
+  font-size: 0.8rem;
+  border-radius: 13px;
   margin-bottom: 0;
   margin-left: 0;
 }
@@ -281,6 +281,8 @@ header nav .nav-links a:hover {
   box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
+  border-radius: 11px;
+  background-color: #e7ede2;
 }
 /* End of Show case*/
 .top-content {
@@ -306,6 +308,7 @@ header nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-left: 4%;
 }
 .top-content .text-container .ed-skl-crtf p,
 .top-content .text-container .ed-skl-crtf h6 {
@@ -324,6 +327,7 @@ header nav .nav-links a:hover {
 }
 #work-history {
   font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
   border-collapse: collapse;
   width: 100%;
 }
@@ -364,19 +368,17 @@ footer nav {
 footer nav a {
   padding: 0.6% 3%;
   color: white;
+  font-size: 0.8rem;
   text-decoration: none;
 }
 footer nav a:hover {
   box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
-  border-radius: 15px;
+  border-radius: 11px;
   background-color: #e7ede2;
 }
 @media (max-width: 500px) {
-  html {
-    font-size: 70%;
-  }
   header nav {
     display: flex;
     flex-wrap: wrap;
@@ -420,12 +422,16 @@ footer nav a:hover {
   .showcase .intro p {
     text-align: center;
   }
+  .showcase .intro h1,
+  .showcase .intro h4 {
+    font-size: 1.3rem;
+  }
   .showcase .intro .team-up-btn {
     width: 35%;
   }
   .showcase .intro .team-up-btn button {
     height: 40px;
-    font-size: 1.6rem;
+    font-size: 0.8rem;
     border-radius: 12px;
   }
   .top-content {
@@ -440,7 +446,11 @@ footer nav a:hover {
     width: 80%;
     text-align: center;
   }
+  .professional-exp {
+    font-weight: bolder;
+  }
   footer nav {
-    width: 80%;
+    width: 100%;
+    font-size: 1.2rem;
   }
 }

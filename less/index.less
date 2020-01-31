@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+    font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -64,6 +64,8 @@ table {
 	box-shadow: 0 5px 15px 0 #000000;
 	border: 1px solid grey;
 	color: @hover-color;
+	border-radius: 11px;
+	background-color: @background-color-btn;
 }
 	.custom-layout(@justify,@align){
 	display: flex;
@@ -79,9 +81,9 @@ table {
 	margin: 0;
 	max-width: 100%;
 }
-*,*:before, *:after{
-	box-sizing: inherit;
-}
+// *,*:before, *:after{
+// 	box-sizing: inherit;
+// }
 // General styles
 html{
 	font-size: 62.5%;
@@ -97,21 +99,26 @@ html, body {
 	font-size: 1.6rem;	
 }
 h1{
-	font-size: 2.5rem;
+	// font-size: 2.5rem;
+	font-size: 1.6rem;
 	font-weight: 1000;
 }
 h2{
-	font-size: 2rem;
+	font-size: 1.2rem;
 	font-weight: 1000;
 }
 h3,h4,h5,h6{
-	font-size: 1.8rem;
+	font-size: 1rem;
 	
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: @title-font;
 	font-weight: 1200;
+}
+
+p{
+	font-size: 0.7rem;
 }
 .bodyWrapper{
 	width: 80%;
@@ -129,6 +136,7 @@ header nav {
 	margin: 2% 0;
 	.logo {
 		width: 7%;
+		padding-left: 2%;
 	}//this closes .logo
 
 	.nav-links {
@@ -141,11 +149,12 @@ header nav {
 			text-decoration: none;
 			font-weight: bold;
 			text-align: center;
+			font-size: 0.8rem;
 
 			&:hover {
 				.button-hover();
-				border-radius: 15px;
-				background-color: @background-color-btn;
+				// border-radius: 11px;
+				// background-color: @background-color-btn;
 			}//this closes a:hover
 		}//this closes a
 	}//this closes .nav-links
@@ -189,9 +198,9 @@ header nav {
 			 button{
 				background-color: lighten(@background-color-education, 25%);
 				width: 100%;
-				height: 80px;
-				font-size: 1.5rem;
-				border-radius: 15px;
+				height: 50px;
+				font-size: 0.8rem;
+				border-radius: 13px;
 				margin-bottom: 0;
 				margin-left: 0;
 				
@@ -228,6 +237,7 @@ header nav {
 		.ed-skl-crtf{
 			.custom-layout(center, center);
 			flex-direction:column;
+			padding-left: 4%;
 
 			p,h6{
 				width: 80%;	
@@ -252,6 +262,7 @@ header nav {
 #work-history {
 	// font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-family: @main-font;
+	font-size: 0.8rem;
 	border-collapse: collapse;
 	width: 100%;
 
@@ -295,11 +306,12 @@ header nav {
 		a {
 			padding: 0.6% 3%;
 			color: white; 
+			font-size: 0.8rem;
 			text-decoration: none;
 			&:hover {
 				.button-hover();
-				border-radius: 15px;
-				background-color: @background-color-btn;
+				// border-radius: 11px;
+				// background-color: @background-color-btn;
 			}//this closes a:hover
 			// &:button-hover();
 		}//this closes a inside of the nav of the footer
@@ -310,9 +322,9 @@ header nav {
 
 
 @media(max-width: 500px){
-	html{
-		font-size: 70%;
-	}//this closes html inside of @media(max-width: 500px)
+	// html{
+	// 	font-size: 62.5%;
+	// }//this closes html inside of @media(max-width: 500px)
 
 	header nav {
 		.custom-layout(center, center);
@@ -348,13 +360,16 @@ header nav {
 		h1,h4,p{
 			text-align: center;
 		}//this closes h1 and p inside of the .intro
+		h1,h4{
+			font-size: 1.3rem;
+		}
 	
 		.team-up-btn{		
 			width: 35%;			
 					
 			 button{				
 				height: 40px;
-				font-size: 1.6rem;
+				font-size: 0.8rem;
 				border-radius: 12px;
 			}//this closes button inside of the .team-up-btn		
 		}//this closes .team-up-btn inside of the .intro		
@@ -372,9 +387,15 @@ header nav {
 	}//this closes .text-container inside of the .top-content
 }//this closes .top-content inside of @media(max-width: 500px)
 
+.professional-exp{
+	font-weight: bolder;
+}
+
 footer{
 	nav{
-		width: 80%;
+		width: 100%;
+		font-size: 1.2rem;
+		
 	}//this closes nav inside of footer
 }//this closes footer inside of @media(max-width: 500px)
 
