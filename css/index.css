@@ -154,6 +154,11 @@ table {
   margin: 0;
   max-width: 100%;
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 html {
   font-size: 62.5%;
 }
@@ -207,9 +212,24 @@ header nav {
   align-items: flex-end;
   margin: 2% 0;
 }
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2% 0;
+  }
+}
 header nav .logo {
   width: 7%;
   padding-left: 2%;
+}
+@media (max-width: 500px) {
+  header nav .logo {
+    width: 9%;
+  }
 }
 header nav .nav-links {
   display: flex;
@@ -218,16 +238,24 @@ header nav .nav-links {
   align-items: center;
   width: 70%;
 }
+@media (max-width: 500px) {
+  header nav .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}
 header nav .nav-links a {
   width: 20%;
   color: #292929;
+  font-size: 0.8rem;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  font-size: 0.8rem;
 }
 header nav .nav-links a:hover {
-  box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
   border-radius: 11px;
@@ -242,8 +270,22 @@ header nav .nav-links a:hover {
   align-items: flex-end;
   background-color: #f2f2f2;
 }
+@media (max-width: 500px) {
+  .showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .showcase img {
   width: 25%;
+}
+@media (max-width: 500px) {
+  .showcase img {
+    width: 50%;
+  }
 }
 .showcase .intro {
   display: flex;
@@ -253,6 +295,37 @@ header nav .nav-links a:hover {
   flex-direction: column;
   width: 65%;
 }
+.showcase .intro .contac {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 95%;
+}
+.showcase .intro .contac span {
+  font-weight: bolder;
+}
+@media (max-width: 500px) {
+  .showcase .intro .contac {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+  }
+}
+@media (max-width: 500px) {
+  .showcase .intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+  }
+}
 .showcase .intro:last-child {
   align-items: center;
 }
@@ -260,29 +333,59 @@ header nav .nav-links a:hover {
 .showcase .intro p {
   margin-bottom: 3.5%;
 }
+@media (max-width: 500px) {
+  .showcase .intro h1,
+  .showcase .intro p {
+    text-align: center;
+  }
+}
 .showcase .intro h4 {
   margin-bottom: 3.5%;
+}
+@media (max-width: 500px) {
+  .showcase .intro h4 {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .showcase .intro h1,
+  .showcase .intro h4 {
+    font-size: 1.3rem;
+  }
 }
 .showcase .intro .team-up-btn {
   width: 25%;
   padding-bottom: 0;
   margin-bottom: 0;
 }
+@media (max-width: 500px) {
+  .showcase .intro .team-up-btn {
+    width: 35%;
+  }
+}
 .showcase .intro .team-up-btn button {
   background-color: #e7ede2;
   width: 100%;
   height: 50px;
   font-size: 0.8rem;
+  color: black;
   border-radius: 13px;
   margin-bottom: 0;
   margin-left: 0;
 }
+@media (max-width: 500px) {
+  .showcase .intro .team-up-btn button {
+    height: 40px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+  }
+}
 .showcase .intro .team-up-btn button:hover {
-  box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
   border-radius: 11px;
   background-color: #e7ede2;
+  box-shadow: 0 5px 15px 0 #000000;
 }
 /* End of Show case*/
 .top-content {
@@ -294,8 +397,24 @@ header nav .nav-links a:hover {
   padding-bottom: 2%;
   margin-left: 0;
 }
+@media (max-width: 500px) {
+  .top-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4%;
+  }
+}
 .top-content .text-container {
   width: 30%;
+}
+@media (max-width: 500px) {
+  .top-content .text-container {
+    width: 80%;
+    text-align: center;
+  }
 }
 .top-content .text-container h2 {
   background-color: #A5BB94;
@@ -324,6 +443,11 @@ header nav .nav-links a:hover {
   border-bottom: 2px solid #A5BB94;
   letter-spacing: 7px;
   margin-bottom: 1%;
+}
+@media (max-width: 500px) {
+  .professional-exp {
+    font-weight: bolder;
+  }
 }
 #work-history {
   font-family: 'Lato', sans-serif;
@@ -365,92 +489,23 @@ footer nav {
   padding: 0.9% 4%;
   font-size: 1.4rem;
 }
+@media (max-width: 500px) {
+  footer nav {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
 footer nav a {
-  padding: 0.6% 3%;
   color: white;
   font-size: 0.8rem;
   text-decoration: none;
+  padding: 0.6% 2%;
+  width: 12%;
+  text-align: center;
 }
 footer nav a:hover {
-  box-shadow: 0 5px 15px 0 #000000;
   border: 1px solid grey;
   color: #B91837;
   border-radius: 11px;
   background-color: #e7ede2;
-}
-@media (max-width: 500px) {
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 2% 0;
-  }
-  header nav .logo {
-    width: 9%;
-  }
-  header nav .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-  /*End  of navigation*/
-  /* Show case*/
-  .showcase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .showcase img {
-    width: 50%;
-  }
-  .showcase .intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 95%;
-  }
-  .showcase .intro h1,
-  .showcase .intro h4,
-  .showcase .intro p {
-    text-align: center;
-  }
-  .showcase .intro h1,
-  .showcase .intro h4 {
-    font-size: 1.3rem;
-  }
-  .showcase .intro .team-up-btn {
-    width: 35%;
-  }
-  .showcase .intro .team-up-btn button {
-    height: 40px;
-    font-size: 0.8rem;
-    border-radius: 12px;
-  }
-  .top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 4%;
-  }
-  .top-content .text-container {
-    width: 80%;
-    text-align: center;
-  }
-  .professional-exp {
-    font-weight: bolder;
-  }
-  footer nav {
-    width: 100%;
-    font-size: 1.2rem;
-  }
 }
